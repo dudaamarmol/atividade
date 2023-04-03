@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .tabuleiro {
+            background-color: rgb(189, 135, 255);
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: space-around;
+            align-self: center;
+            align-content: space-around;
+            flex-direction: column;
+
+        }
+
+        .linhas {
+            width: 100%;
+            height: 150px;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .celula {
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(75, 25, 224);
+            font-size: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            justify-content: center;
+            box-shadow: 1px 1px black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="tabuleiro">
+        <div class="linhas">
+            <div onclick="Marcar('A11')" class="celula" id="A11"></div>
+            <div onclick="Marcar('A12')" class="celula" id="A12"></div>
+            <div onclick="Marcar('A13')" class="celula" id="A13"></div>
+        </div>
+        <div class="linhas">
+            <div onclick="Marcar('A21')" class="celula" id="A21"></div>
+            <div onclick="Marcar('A22')" class="celula" id="A22"></div>
+            <div onclick="Marcar('A23')" class="celula" id="A23"></div>
+        </div>
+        <div class="linhas">
+            <div onclick="Marcar('A31')" class="celula" id="A31"></div>
+            <div onclick="Marcar('A32')" class="celula" id="A32"></div>
+            <div onclick="Marcar('A33')" class="celula" id="A33"></div>
+        </div>
+
+    </div>
+</body>
+<script>
+    cliques = 0;
+
+    function Marcar(ID) {
+        if (document.getElementById(ID).innerHTML == "")
+            cliques = cliques + 1;
+        if (ID == "A11") {
+            if (cliques == 1) {
+                A11.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A11.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A12") {
+            if (cliques == 1) {
+                A12.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A12.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A13") {
+            if (cliques == 1) {
+                A13.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A13.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A21") {
+            if (cliques == 1) {
+                A21.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A21.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A22") {
+            if (cliques == 1) {
+                A22.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A22.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A23") {
+            if (cliques == 1) {
+                A23.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A23.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A31") {
+            if (cliques == 1) {
+                A31.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A31.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A32") {
+            if (cliques == 1) {
+                A32.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A32.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if (ID == "A33") {
+            if (cliques == 1) {
+                A33.innerHTML = "X"
+            }
+            if (cliques == 2) {
+                A33.innerHTML = "O";
+                cliques = 0;
+            }
+        }
+        if(A11.innerHTML==A12.innerHTML && A13.innerHTML)
+        {
+            if(A11.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A11.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A21.innerHTML==A22.innerHTML && A23.innerHTML)
+        {
+            if(A21.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A21.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A31.innerHTML==A32.innerHTML && A33.innerHTML)
+        {
+            if(A31.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A31.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A11.innerHTML==A22.innerHTML && A33.innerHTML)
+        {
+            if(A11.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A11.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A13.innerHTML==A22.innerHTML && A31.innerHTML)
+        {
+            if(A13.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A13.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A11.innerHTML==A21.innerHTML && A31.innerHTML)
+        {
+            if(A11.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A11.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A12.innerHTML==A22.innerHTML && A32.innerHTML)
+        {
+            if(A12.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A12.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+        if(A13.innerHTML==A23.innerHTML && A33.innerHTML)
+        {
+            if(A13.innerHTML=="X")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('X GANHOU CARALHOOO PAU NO CU DO BOLINHA'));
+            }
+            if(A13.innerHTML=="O")
+            {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance('BOLINHA GANHOU PORRAA SE FUDEU X'));
+            }
+        }
+}
+
+
+</script>
+
+</html>
